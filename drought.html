@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海河流域抗旱管理系统-首页与旱情信息展示</title>
+
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<!--弹出层样式-->
+<style type="text/css">
+/*自适应圆角投影*/
+.round_shade_box{width:1px; height:1px; font-size:0; display:none; _background:white; _border:1px solid #cccccc;}
+.round_shade_top{margin:0 12px 0 10px; background:url(image/zxx_round_shade.png) repeat-x -20px -40px; _background:white; zoom:1;}
+.round_shade_topleft{width:11px; height:10px; background:url(image/zxx_round_shade.png) no-repeat 0 0; _background:none; float:left; margin-left:-11px; position:relative;}
+.round_shade_topright{width:12px; height:10px; background:url(image/zxx_round_shade.png) no-repeat -29px 0; _background:none; float:right; margin-right:-12px; position:relative;}
+.round_shade_centerleft{background:url(image/zxx_round_shade.png) no-repeat 0 -1580px; _background:none;}
+.round_shade_centerright{background:url(image/zxx_round_shade.png) no-repeat right -80px; _background:none;}
+.round_shade_center{font-size:14px; margin:0 12px 0 10px; padding:10px; background:white; letter-spacing:1px; line-height:1.5;}
+.round_shade_bottom{margin:0 12px 0 11px; background:url(image/zxx_round_shade.png) repeat-x -20px bottom; _background:white; zoom:1;}
+.round_shade_bottomleft{width:11px; height:10px; background:url(image/zxx_round_shade.png) no-repeat 0 -30px; _background:none; float:left; margin-left:-11px; position:relative;}
+.round_shade_bottomright{width:12px; height:10px; background:url(image/zxx_round_shade.png) no-repeat -29px -30px; _background:none; float:right; margin-right:-12px; position:relative;}
+.round_shade_top:after,.round_shade_bottom:after,.zxx_zoom_box:after{display:block; content:"."; height:0; clear:both; overflow:hidden; visibility:hidden;}
+.round_box_close{padding:2px 5px; font-size:12px; color:#ffffff; text-decoration:none; border:1px solid #cccccc; -moz-border-radius:4px; -webkit-border-radius:4px; background:#000000; opacity:0.8; filter:alpha(opacity=80); position:absolute; right:-5px; top:-5px;}
+.round_box_close:hover{opacity:0.95; filter:alpha(opacity=95);}
+/*自适应圆角投影结束*/
+.zxx_zoom_left{width:45%; float:left; margin-top:20px; border-right:1px solid #dddddd;}
+.zxx_zoom_left h4{margin:5px 0px 15px 0px; font-size:1.1em;}
+.small_pic{display:inline-block; width:45%; height:150px; font-size:120px; margin-left:5px;text-align:center; *display:inline; zoom:1; vertical-align:middle;}
+.small_pic img{padding:3px; background:#ffffff; border:1px solid #cccccc; vertical-align:middle;}
+.zxx_zoom_right{width:50%; float:left; margin-top:20px; padding-left:2%;}
+.zxx_zoom_right h4{margin:5px 0px; font-size:1.1em;}
+.zxx_zoom_right p.zxx_zoom_word{line-height:1.5; font-size:1.05em; letter-spacing:1px; margin:0 0 35px; padding-top:5px;}
+</style>
+
+<script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="js/content_zoom.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('div.small_pic a').fancyZoom({scaleImg: true, closeOnClick: true});
+});
+document.oncontextmenu = function(){
+	　　return false;
+	}
+</script>
+
+
+</head>
+
+<body onload="check()">
+	<div class="zxx_out_box">
+    	<div class="zxx_in_box">
+        	
+            <h3 class="zxx_title">海河流域抗旱管理系统-首页与旱情信息</h3>
+            <p class="zxx_title" style="font-size:1.4em;margin:10px 0;">（单击图片可放大）</p>
+            <div class="zxx_main_con fix mb20">
+            	<div class="zxx_zoom_left">
+                    <h4>系统简介</h4>
+                    <p class="zxx_zoom_word">&nbsp;&nbsp;流域（省）抗旱业务应用系统在防汛抗旱综合数据库和其它数据库的支撑下运行。根据流域（省）抗旱工作的流程实现包括旱情监视、旱情预测、旱情评估、旱灾评估、抗旱水量调度、抗旱能力建设、抗旱会商等业务功能。</p>
+                  <br />
+                    <h4>使用技术</h4>
+                  <p>&nbsp;&nbsp;前台：Miniui+Echarts<br />&nbsp;&nbsp;后台：Spring+RESTful+Cxf+Mybatis<br />&nbsp;&nbsp;使用Swagger对各接口进行测试</p>
+                   <br />
+                    <h4>主要负责</h4>
+                  <p><h5>首页</h5>
+&nbsp;&nbsp;● 实时旱情，编写国标气象干旱指数算法，计算海河流域省级区域干旱等级，以列表形式实时显示，并与地图交互实现地图初始化渲染及单击定位弹出详细信息窗口；页面上方滚动显示旱情信息效果。
+<br />&nbsp;&nbsp;● 干旱预测-相似年分析，编写标准化降雨指数算法，计算海河流域省级当前一月指数，及降水情况相似年每月指数，比较获得未来旱情趋势结论，以列表形式显示，实现与地图渲染及定位；双击显示该区域相似年与当前月指数变化趋势图，及结论列表。
+<br /><br /><h5>旱情信息</h5>
+&nbsp;&nbsp;● 气温、降雨模块，包括区域平均气温，区域高温日数，区域气温预报；区域\单站降雨量，区域\单站无雨日数，区域气温\降雨预报模块。<br />
+&nbsp;&nbsp;(1)链接国家气象平台相关接口获取数据，预报未来6天气温与降雨情况；<br />
+&nbsp;&nbsp;(2)对流域省级区域按日、旬、月、季查询气温和降雨情况，以列表形式显示概述，与地图渲染及定位；在详情页实现按区域\测站，日、旬、月、季不同时段查询气温降雨值，历史同期最值，历史排序等信息，并显示过程线及历史同期趋势图。</p>
+                </div>
+                <div class="zxx_zoom_right">
+                    <div class="small_pic">
+                        <a href="#pic_one">
+                            <img src="image/drought/d1.jpg" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_two">
+                            <img src="image/drought/d2.jpg" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_three">
+                            <img src="image/drought/d3.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_four">
+                            <img src="image/drought/d4.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_five">
+                            <img src="image/drought/d5.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_six">
+                            <img src="image/drought/d6.jpg" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_seven">
+                            <img src="image/drought/d7.jpg" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_eight">
+                            <img src="image/drought/d8.jpg" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_nine">
+                            <img src="image/drought/d9.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_ten">
+                            <img src="image/drought/d10.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 要放大显示的div -->
+	
+    <div id="pic_one" style="display:none;"><img src="image/drought/d1.jpg" /></div>
+    <div id="pic_two" style="display:none;"><img src="image/drought/d2.jpg" /></div>
+    <div id="pic_three" style="display:none;"><img src="image/drought/d3.png" /></div>
+    <div id="pic_four" style="display:none;"><img src="image/drought/d4.png" /></div>
+	<div id="pic_five" style="display:none;"><img src="image/drought/d5.png" /></div>
+    <div id="pic_six" style="display:none;"><img src="image/drought/d6.jpg" /></div>
+    <div id="pic_seven" style="display:none;"><img src="image/drought/d7.jpg" /></div>
+    <div id="pic_eight" style="display:none;"><img src="image/drought/d8.jpg" /></div>
+	<div id="pic_nine" style="display:none;"><img src="image/drought/d9.png" /></div>
+    <div id="pic_ten" style="display:none;"><img src="image/drought/d10.png" /></div>
+</body>
+</html>

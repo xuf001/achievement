@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海委防汛抗旱综合信息服务系统-应急办公模块展示</title>
+
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<!--弹出层样式-->
+<style type="text/css">
+/*自适应圆角投影*/
+.round_shade_box{width:1px; height:1px; font-size:0; display:none; _background:white; _border:1px solid #cccccc;}
+.round_shade_top{margin:0 12px 0 10px; background:url(image/zxx_round_shade.png) repeat-x -20px -40px; _background:white; zoom:1;}
+.round_shade_topleft{width:11px; height:10px; background:url(image/zxx_round_shade.png) no-repeat 0 0; _background:none; float:left; margin-left:-11px; position:relative;}
+.round_shade_topright{width:12px; height:10px; background:url(image/zxx_round_shade.png) no-repeat -29px 0; _background:none; float:right; margin-right:-12px; position:relative;}
+.round_shade_centerleft{background:url(image/zxx_round_shade.png) no-repeat 0 -1580px; _background:none;}
+.round_shade_centerright{background:url(image/zxx_round_shade.png) no-repeat right -80px; _background:none;}
+.round_shade_center{font-size:14px; margin:0 12px 0 10px; padding:10px; background:white; letter-spacing:1px; line-height:1.5;}
+.round_shade_bottom{margin:0 12px 0 11px; background:url(image/zxx_round_shade.png) repeat-x -20px bottom; _background:white; zoom:1;}
+.round_shade_bottomleft{width:11px; height:10px; background:url(image/zxx_round_shade.png) no-repeat 0 -30px; _background:none; float:left; margin-left:-11px; position:relative;}
+.round_shade_bottomright{width:12px; height:10px; background:url(image/zxx_round_shade.png) no-repeat -29px -30px; _background:none; float:right; margin-right:-12px; position:relative;}
+.round_shade_top:after,.round_shade_bottom:after,.zxx_zoom_box:after{display:block; content:"."; height:0; clear:both; overflow:hidden; visibility:hidden;}
+.round_box_close{padding:2px 5px; font-size:12px; color:#ffffff; text-decoration:none; border:1px solid #cccccc; -moz-border-radius:4px; -webkit-border-radius:4px; background:#000000; opacity:0.8; filter:alpha(opacity=80); position:absolute; right:-5px; top:-5px;}
+.round_box_close:hover{opacity:0.95; filter:alpha(opacity=95);}
+/*自适应圆角投影结束*/
+.zxx_zoom_left{width:45%; float:left; margin-top:20px; border-right:1px solid #dddddd;}
+.zxx_zoom_left h4{margin:5px 0px 15px 0px; font-size:1.1em;}
+.small_pic{display:inline-block; width:45%; height:150px; font-size:120px; margin-left:5px;text-align:center; *display:inline; zoom:1; vertical-align:middle;}
+.small_pic img{padding:3px; background:#ffffff; border:1px solid #cccccc; vertical-align:middle;}
+.zxx_zoom_right{width:50%; float:left; margin-top:20px; padding-left:2%;}
+.zxx_zoom_right h4{margin:0px 0px; font-size:1.1em;}
+.zxx_zoom_right p.zxx_zoom_word{line-height:1.5; font-size:1.05em; letter-spacing:1px; margin:0 0 35px; padding-top:5px;}
+</style>
+
+<script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="js/content_zoom.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('div.small_pic a').fancyZoom({scaleImg: true, closeOnClick: true});
+});
+document.oncontextmenu = function(){
+	　　return false;
+	}
+</script>
+
+
+</head>
+
+<body>
+	<div class="zxx_out_box">
+    	<div class="zxx_in_box">
+        	
+            <h3 class="zxx_title">海委防汛抗旱综合信息服务系统-应急办公模块</h3>
+            <p class="zxx_title" style="font-size:1.4em;margin:10px 0;">（单击图片可放大）</p>
+            <div class="zxx_main_con fix mb20">
+            	<div class="zxx_zoom_left">
+                    <h4>系统简介</h4>
+                    <p class="zxx_zoom_word">&nbsp;&nbsp;防汛抗旱综合信息服务系统下应急值守与办公管理两大模块，对汛期海委值班安排及日常办公等业务进行管理。完成排班、短信、传真收发，各级资料上传、预览，权限控制等功能。</p>
+                <br />
+                    <h4>使用技术</h4>
+                  <p>&nbsp;&nbsp;前台：LigerUI+HTML+SweetAlert<br />&nbsp;&nbsp;后台：Spring+Struct2+Mybatis<br />&nbsp;&nbsp;Axis2发布Webservice</p>
+                   <br />
+                    <h4>主要负责</h4>
+                  <p><h5>应急值守</h5>
+&nbsp;&nbsp;● 当日值班，以月历形式展示一个月的值班人员，当前值班人员高亮，并可进行值班日志填报；<br />&nbsp;&nbsp;传真记录，按阅读状态及时间顺序显示7天内已接收传真，可点击在线预览，并更新阅读状态。
+<br />&nbsp;&nbsp;● 值班管理，编写自动排班算法实现均衡排班，统计时间区间内每位值班人员的各类值班次数，并按需做排班调整；可导出时间区间内排班记录。
+<br />&nbsp;&nbsp;● 短信管理，单发与群发短信，输入联系人分手动及从联系人组中选择；查看发送接收短信，可批量删除；从通讯录创建短信联系人分组。
+<br />&nbsp;&nbsp;● 传真管理，单发与群发传真，输入联系人分手动及从联系人组中选择，可上传附件，分保存草稿和直接发送；查看发送接收传真，点击在线预览，可批量删除，有权限控制；从通讯录创建传真联系人分组。
+<br />&nbsp;&nbsp;● 电话记录，查看时间区间内通话信息。
+<br /><br /><h5>办公管理</h5>
+&nbsp;&nbsp;● 我的主页，我的资料显示登陆人上传资料，动态标识各类别份数，可点击单独显示，可在线预览；我的项目显示登录人上传项目，动态显示查询条件，可在线预览；通讯录显示登录人收藏联系人，可直接发送短信，可取消收藏。
+<br />&nbsp;&nbsp;● 资料管理与项目管理，上传下载文件，对有附件文件可单击在线预览，对编辑删除操作加权限控制，可批量删除；
+<br />&nbsp;&nbsp;● 通讯录管理，联系人收藏，可批量选择。
+<br /><br />&nbsp;&nbsp;确保页面兼容IE9，10，11，chrome等浏览器，并能自适应不同分辨率。
+               </div>
+                <div class="zxx_zoom_right">
+                    <div class="small_pic">
+                        <a href="#pic_one">
+                            <img src="image/office/o1.jpg" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_two">
+                            <img src="image/office/o2.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_three">
+                            <img src="image/office/o3.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_four">
+                            <img src="image/office/o4.jpg" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_five">
+                            <img src="image/office/o5.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_six">
+                            <img src="image/office/o6.jpg" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_seven">
+                            <img src="image/office/o7.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_eight">
+                            <img src="image/office/o8.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_nine">
+                            <img src="image/office/o9.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_ten">
+                            <img src="image/office/o10.jpg" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 要放大显示的div -->
+	
+    <div id="pic_one" style="display:none;"><img src="image/office/o1.jpg" /></div>
+    <div id="pic_two" style="display:none;"><img src="image/office/o2.png" /></div>
+    <div id="pic_three" style="display:none;"><img src="image/office/o3.png" /></div>
+    <div id="pic_four" style="display:none;"><img src="image/office/o4.jpg" /></div>
+	<div id="pic_five" style="display:none;"><img src="image/office/o5.png" /></div>
+    <div id="pic_six" style="display:none;"><img src="image/office/o6.jpg" /></div>
+    <div id="pic_seven" style="display:none;"><img src="image/office/o7.png" /></div>
+    <div id="pic_eight" style="display:none;"><img src="image/office/o8.png" /></div>
+	<div id="pic_nine" style="display:none;"><img src="image/office/o9.png" /></div>
+    <div id="pic_ten" style="display:none;"><img src="image/office/o10.jpg" /></div>
+</body>
+</html>

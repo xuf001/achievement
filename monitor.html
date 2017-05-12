@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>服务器监控系统展示</title>
+
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<!--弹出层样式-->
+<style type="text/css">
+/*自适应圆角投影*/
+.round_shade_box{width:1px; height:1px; font-size:0; display:none; _background:white; _border:1px solid #cccccc;}
+.round_shade_top{margin:0 12px 0 10px; background:url(image/zxx_round_shade.png) repeat-x -20px -40px; _background:white; zoom:1;}
+.round_shade_topleft{width:11px; height:10px; background:url(image/zxx_round_shade.png) no-repeat 0 0; _background:none; float:left; margin-left:-11px; position:relative;}
+.round_shade_topright{width:12px; height:10px; background:url(image/zxx_round_shade.png) no-repeat -29px 0; _background:none; float:right; margin-right:-12px; position:relative;}
+.round_shade_centerleft{background:url(image/zxx_round_shade.png) no-repeat 0 -1580px; _background:none;}
+.round_shade_centerright{background:url(image/zxx_round_shade.png) no-repeat right -80px; _background:none;}
+.round_shade_center{font-size:14px; margin:0 12px 0 10px; padding:10px; background:white; letter-spacing:1px; line-height:1.5;}
+.round_shade_bottom{margin:0 12px 0 11px; background:url(image/zxx_round_shade.png) repeat-x -20px bottom; _background:white; zoom:1;}
+.round_shade_bottomleft{width:11px; height:10px; background:url(image/zxx_round_shade.png) no-repeat 0 -30px; _background:none; float:left; margin-left:-11px; position:relative;}
+.round_shade_bottomright{width:12px; height:10px; background:url(image/zxx_round_shade.png) no-repeat -29px -30px; _background:none; float:right; margin-right:-12px; position:relative;}
+.round_shade_top:after,.round_shade_bottom:after,.zxx_zoom_box:after{display:block; content:"."; height:0; clear:both; overflow:hidden; visibility:hidden;}
+.round_box_close{padding:2px 5px; font-size:12px; color:#ffffff; text-decoration:none; border:1px solid #cccccc; -moz-border-radius:4px; -webkit-border-radius:4px; background:#000000; opacity:0.8; filter:alpha(opacity=80); position:absolute; right:-5px; top:-5px;}
+.round_box_close:hover{opacity:0.95; filter:alpha(opacity=95);}
+/*自适应圆角投影结束*/
+.zxx_zoom_left{width:45%; float:left; margin-top:20px; border-right:1px solid #dddddd;}
+.zxx_zoom_left h4{margin:5px 0px 15px 0px; font-size:1.1em;}
+.small_pic{display:inline-block; width:45%; height:150px; font-size:120px; margin-left:5px;text-align:center; *display:inline; zoom:1; vertical-align:middle;}
+.small_pic img{padding:3px; background:#ffffff; border:1px solid #cccccc; vertical-align:middle;}
+.zxx_zoom_right{width:50%; float:left; margin-top:20px; padding-left:2%;}
+.zxx_zoom_right h4{margin:5px 0px; font-size:1.1em;}
+.zxx_zoom_right p.zxx_zoom_word{line-height:1.5; font-size:1.05em; letter-spacing:1px; margin:0 0 35px; padding-top:5px;}
+</style>
+
+<script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="js/content_zoom.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('div.small_pic a').fancyZoom({scaleImg: true, closeOnClick: true});
+});
+document.oncontextmenu = function(){
+	　　return false;
+	}
+</script>
+
+
+</head>
+
+<body>
+	<div class="zxx_out_box">
+    	<div class="zxx_in_box">
+        	
+            <h3 class="zxx_title">服务器监控系统</h3>
+            <p class="zxx_title" style="font-size:1.4em;margin:10px 0;">（单击图片可放大）</p>
+            <div class="zxx_main_con fix mb20">
+            	<div class="zxx_zoom_left">
+                    <h4>系统简介</h4>
+                    <p class="zxx_zoom_word">&nbsp;&nbsp;本监控系统通过监控主机、网络、硬件以及各业务系统，当被监控设备达到预警阀值时，通过电话、短信方式向各设备负责人发送预警信息。可控制访问权限以及报警目标。用户能实时查看各监控设备的运行情况及历史数据。</p>
+                  <br />
+                    <h4>使用技术</h4>
+                  <p>&nbsp;&nbsp;前台：Extjs<br />&nbsp;&nbsp;后台：SpringMVC+Mybatis</p>
+                   <br />
+                    <h4>主要负责</h4>
+&nbsp;&nbsp;监控数据管理系统，包括主机，进程，网络，数据库，小额结算监控项配置，监控状态信息实时展示，超预警阈值该项标红；个性化系统监控信息重组；报警记录查询。
+<br />&nbsp;&nbsp;● 预警概述，实时显示服务器主机信息及对应的主机，进程，网络，数据库，文件，报文报警状态，并提供报警开关。
+<br />&nbsp;&nbsp;● 主机管理，添加服务器主机信息，配置CPU,内存,硬盘占用率等主机监控项信息，可做增删改查操作，并提供监控开关；实时显示主机当前监控信息，磁盘lspv,lsdev等信息可查看详情。
+<br />&nbsp;&nbsp;● 进程、数据库、网络、小额结算时间管理，配置服务器进程、数据库、网络监控信息，包括总监控数据和具体监控项情况，可做增删改查操作，并提供监控开关；实时显示当前监控信息，可查看详情。
+<br />&nbsp;&nbsp;● 应用系统管理，实时显示与各个系统业务相关联的服务器主机，以及其对应的所以监控模块信息概述，可按业务查询。
+<br />&nbsp;&nbsp;● 报警记录查询，显示各个监控模块历史监控信息，能按条件检索及删除，可导出Excel文件。
+                </div>
+                <div class="zxx_zoom_right">
+                    <div class="small_pic">
+                        <a href="#pic_one">
+                            <img src="image/monitor/m1.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_two">
+                            <img src="image/monitor/m2.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_three">
+                            <img src="image/monitor/m3.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_four">
+                            <img src="image/monitor/m4.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_five">
+                            <img src="image/monitor/m5.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_six">
+                            <img src="image/monitor/m6.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_seven">
+                            <img src="image/monitor/m7.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_eight">
+                            <img src="image/monitor/m8.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_nine">
+                            <img src="image/monitor/m9.png" />
+                        </a>
+                    </div>
+                    <div class="small_pic">
+                        <a href="#pic_ten">
+                            <img src="image/monitor/m10.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 要放大显示的div -->
+	
+    <div id="pic_one" style="display:none;"><img src="image/monitor/m1.png" /></div>
+    <div id="pic_two" style="display:none;"><img src="image/monitor/m2.png" /></div>
+    <div id="pic_three" style="display:none;"><img src="image/monitor/m3.png" /></div>
+    <div id="pic_four" style="display:none;"><img src="image/monitor/m4.png" /></div>
+	<div id="pic_five" style="display:none;"><img src="image/monitor/m5.png" /></div>
+    <div id="pic_six" style="display:none;"><img src="image/monitor/m6.png" /></div>
+    <div id="pic_seven" style="display:none;"><img src="image/monitor/m7.png" /></div>
+    <div id="pic_eight" style="display:none;"><img src="image/monitor/m8.png" /></div>
+	<div id="pic_nine" style="display:none;"><img src="image/monitor/m9.png" /></div>
+    <div id="pic_ten" style="display:none;"><img src="image/monitor/m10.png" /></div>
+</body>
+</html>
